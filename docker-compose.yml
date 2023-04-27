@@ -8,8 +8,10 @@ services:
       - ./teamcity-server/data:./teamcity-server/data
       - ./teamcity-server/logs:./teamcity-server/logs
     mem_limit: 2g
+    restart: always
   agent:
     image: jetbrains/teamcity-agent:latest
+    restart: always
     environment:
       - SERVER_URL=http://server:8111
       - TEAMCITY_SERVER_MEM_OPTS=-Xmx2g -XX:ReservedCodeCacheSize=350m
