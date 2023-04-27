@@ -13,5 +13,5 @@ services:
     image: jetbrains/teamcity-agent:latest
     restart: always
     environment:
-      - SERVER_URL=http://server:8111
+      - SERVER_URL=http://localhost:8111
       - TEAMCITY_SERVER_MEM_OPTS=-Xmx2g -XX:ReservedCodeCacheSize=350m
